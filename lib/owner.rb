@@ -4,11 +4,12 @@ class Owner
   attr_accessor :name, :pets, :fish, :dog, :cat
 
   @@all = []
-  @@pets = {:fishes => [], :dogs => [], :cats => []}
+  #@@pets = {:fishes => [], :dogs => [], :cats => []}
 
   def initialize(species)
     @species = species
     @name = name
+    @pets = {:fishes => [], :dogs => [], :cats => []}
     @@all << self
   end
 
@@ -63,7 +64,7 @@ class Owner
   end
 
   def sell_pets
-    @@pets.each do |species, instances|
+    @pets.each do |species, instances|
       instances.each do |pet|
         pet.mood = 'nervous'
         #binding.pry
