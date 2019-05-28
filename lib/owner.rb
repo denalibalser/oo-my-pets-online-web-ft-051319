@@ -66,7 +66,7 @@ class Owner
     @@pets.each do |species, instances|
       instances.each do |pet|
         pet.mood = 'nervous'
-        binding.pry
+        #binding.pry
       end
       instances.clear
     end
