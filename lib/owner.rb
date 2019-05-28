@@ -65,14 +65,8 @@ class Owner
   def sell_pets
     @@pets.collect do |species, instances|
       instances.each do |pet|
-        if pet.mood = 'happy'
-          mood  = 'nervous'
-        end
+        pet.mood = 'nervous'
         #binding.pry
-
-
-
-
       end
       instances.clear
     end
